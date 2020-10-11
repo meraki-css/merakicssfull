@@ -94,43 +94,6 @@ $(document).ready(function() {
 
 
 
-/* POPUPS */
-$(document).ready(function() {
-
-  $(".sm-popup-button").click(function(){
-    $("#popup-small").toggleClass(".sm-popup-button");
-    $("#popup-small").fadeToggle();
-    $("#popup-medium").fadeOut();
-    $("#popup-large").fadeOut();
-
-  });
-
-  $(".med-popup-button").click(function(){
-    $("#popup-medium").toggleClass(".med-popup-button");
-    $("#popup-medium").fadeToggle();
-    $("#popup-large").fadeOut();
-    $("#popup-large").fadeOut();
-  });
-
-  $(".lg-popup-button").click(function(){
-    $("#popup-large").toggleClass(".lg-popup-button");
-    $("#popup-large").fadeToggle();
-    $("#popup-small").fadeOut();
-    $("#popup-medium").fadeOut();
-  });
-
-  $(".popup-alert").click(function() {
-    $(".popup-alert").fadeOut();
-  });
-
-  $(".intext-button").click(function(){
-    $("#popup-large").toggleClass(".sm-popup-button");
-    $("#popup-large").fadeToggle();
-  });
-
-});
-
-
 
 /* WAYFINDER */
 $(document).ready(function() {
