@@ -44,35 +44,43 @@
 *     > L:line 835
 *     > XL:line 866
 *
+* > POPUPS:line 899
+*   > Popup Container:line 900
+*   > All Buttons:line 914
+*     > Small Button:line 939
+*     > Medium Button:line 959
+*     > Large Button:line 975
+*   > Popup Content:line 991
+*   > Popup Alert:line 1028
 *
-* > CARDS:line 888
-*   > Card Deck:line 890
-*   > Card:line 897
-*   > Card Content:line 914
-*   > Card Shadow (Helper):line 941
-*   > Media Queries:line 958
+* > CARDS:line 1048
+*   > Card Deck:line 1049
+*   > Card:line 1057
+*   > Card Content:line 1074
+*   > Card Shadow (Helper):line 1101
+*   > Media Queries:line 1106
 *
-* > CONTAINER:line 994
+* > CONTAINER:line 1145
 * 
-* > HELPERS:line 1002
-*   > Height:line 1003
-*   > Heading Size:line 1034
-*   > Text Size:line 1055
-*   > Text Color:line 1076
-*   > Text Align:line 1117
-*   > Capitalization:line 1130
-*   > Width:line 1143
-*   > Red:line 1164
-*   > Orange:line 1413
-*   > Yellow:line 1601
-*   > Green:line 1871
-*   > Blue:line 2168
-*   > Purple:line 2425
-*   > Pink:line 2666
-*   > White:line 2835
-*   > Black:line 3100
-*   > Gray:line 3245
-*   > Brown:line 3446
+* > HELPERS:line 1153
+*   > Height:line 1154
+*   > Heading Size:line 1185
+*   > Text Size:line 1206
+*   > Text Color:line 1227
+*   > Text Align:line 1268
+*   > Capitalization:line 1281
+*   > Width:line 1294
+*   > Red:line 1315
+*   > Orange:line 1564
+*   > Yellow:line 1757
+*   > Green:line 2022
+*   > Blue:line 2319
+*   > Purple:line 2576
+*   > Pink:line 2817
+*   > White:line 2986
+*   > Black:line 3251
+*   > Gray:line 3396
+*   > Brown:line 3597
 *
 */
 
@@ -101,7 +109,7 @@
 }
 
 .s-1 {
-  width: 8.3333333333%;
+  width: 7.875%;
   max-width: 100%;
 }
 
@@ -374,9 +382,9 @@
 }
 
 
-
 /* BACKGROUND IMAGE */
 .bg-img {
+  background-image: url(pic.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -453,6 +461,12 @@
   transition: background-color 1.5s ease;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* MEDIA QUERIES - Billboard */
 /* extra-small ie phone */
@@ -462,11 +476,11 @@
     font-size: 2.8125em;
   }
 
-	.billboard h2 {
-		font-size: 2.3125em;
-	}
+    .billboard h2 {
+        font-size: 2.3125em;
+    }
 
-	.billboard h3 {
+    .billboard h3 {
     font-size: 1.9825em;
   }
 
@@ -499,7 +513,7 @@
     font-size: 4.0625em;
   }
 
-	.billboard h2 {
+    .billboard h2 {
     font-size: 3.5625em;
   }
 
@@ -885,6 +899,157 @@
   }
 } 
 
+
+
+/* POPUPS */
+/* popup container */
+.popup-container {
+  width: 30%;
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  margin: 2em;
+  justify-content: space-around; 
+  align-items: center;
+  background-color: #DBDBDB;
+  padding: 12px;
+  border-radius: 4px;
+} 
+
+/* all buttons */
+.popup-common {
+  width: fit-content;
+  height: 1.5em;
+  display: flex;
+  display: -webkit-flex; 
+  justify-content: center;
+  align-items: center; 
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  border: none;
+  transition: background-color 0.5s ease;
+}
+
+.popup-common button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.popup-common:focus {
+  outline: 0;
+}
+
+/* small button */
+.sm-popup-button button {
+  background-color:  #9BC4ED;
+  font-size: 15px;
+  padding: 5px 8px 5px 8px;
+  border-radius: 4px;
+}
+
+.sm-popup-button button:hover {
+  background-color: #83ADF1;
+}
+
+.sm-popup-button button:focus, .med-popup-button button:focus,.lg-popup-button button:focus {
+  outline: 0;
+}
+
+#popup-small {
+  background-color: #addb98;
+}
+
+/* medium button */
+.med-popup-button button{
+  background-color:  #9B9BED;
+  font-size: 23px;
+  padding: 5px 8px 5px 8px;
+  border-radius: 4px;
+}
+
+.med-popup-button button:hover {
+  background-color: #8F8FFD;
+} 
+
+#popup-medium {
+  background-color: #80a8ff;
+}
+
+/* large button */
+.lg-popup-button button {
+  background-color: #C49BED;
+  font-size: 33px;
+  padding: 5px 9px 5px 9px;
+  border-radius: 4px;
+}
+
+.lg-popup-button button:hover {
+  background-color: #CE7FFF;
+}  
+
+#popup-large {
+  background-color: #ffbf80;
+}
+
+/* popup content */
+.popup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: fit-content;
+  background-color: #DBDBDB;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  margin: 2em;
+  z-index: 5;
+}
+
+.intext-button {
+  background-color:  #9BC4ED;
+  transition: background-color 0.5s ease;
+  width: fit-content;
+  height: 2em;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  padding: 4px;
+  border-radius: 4px;
+  border: none;
+}
+
+.intext-button:hover {
+  transition: background-color 0.5s ease;
+  background-color: #83ADF1;
+
+}
+
+.intext-button:focus {
+  outline: 0;
+}
+
+/* popup alert */
+.popup-alert {
+  width: 40%;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  padding: 3em;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
 /* CARDS */
 /* Card Deck */
 .card-deck {
@@ -1002,7 +1167,7 @@
 /* HELPERS */
 /* height */
 .h-100 {
-	width: 100%;
+    width: 100%;
   height: 100vh;
   background-size: 100% 100vh;
 }
@@ -1014,13 +1179,13 @@
 }
 
 .h-50 {
-	width: 100%;
+    width: 100%;
   height: 50vh;
   background-size: 100% 50vh;
 }
 
 .h-33 {
-	width: 100%;
+    width: 100%;
   height: 33vh;
   background-size: 100% 33vh;
 }
